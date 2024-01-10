@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='app.css') }}">
+    <title> Cupcakes</title>
+</head>
+<body>
+    <h1>Cupcake List</h1>
+    <ul id="cupcakes-list">
+    </ul>
+    <h1>Hello Moron</h1>
+    {% block content %}
+    {% endblock %}
+    <form id="form">
+        <label for="form-flavor"> Flavor:</label><br>
+        <input type="text" name="flavor" id="form-flavor"></input><br>
+        <label for="form-size"> Size:</label><br>
+        <tr><input type="text" name="size" id="form-size"></input><br>
+        <label for="form-rating"> Rating:</label><br>
+        <input type="number" name="rating" id="form-rating"></input><br>
+        <label for="form-image"> Image Url:</label><br>
+        <input type="text" name="Image" id="form-image"></input><br>
+    <br><button id="button">Create New cupcake</button>
+    </form>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script type="text/javascript"src="{{url_for('static', filename='cupcake.js')}}"></script>
+    
+</body>
+</html>

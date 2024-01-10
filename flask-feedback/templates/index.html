@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+    {if 'user_id' not in session%}
+    <li><a href="/register">register</a></li>
+    <li><a href="/login">login</a></li>
+    {% endif %}
+    {if 'user_id' in session%}
+    <li><a href="/logout">logout</a></li>
+    <li><a href="/user">secret</a></li>
+    {% endif %}
+</ul>
+
+{% endblock %}

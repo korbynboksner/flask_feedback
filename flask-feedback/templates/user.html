@@ -1,0 +1,9 @@
+{% block content %}
+
+<h2>{{ user.first_name }} {{ user.last_name }}</h2>
+<h3>{{ user.email }}</h3>
+<form action="/users/{{user.username}}/delete" method="POST"> 
+    <button>Delete Account</button></form>
+<form action="/users/{{user.username}}/feedback/add" method="GET"> 
+    <button>Add feedback</button></form>
+{% endblock %}
